@@ -23,8 +23,8 @@ repository: JuliaButte/juliabutte
 email: julia.butte@kit.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Doctoral researcher in the KASTEL-LADS group at at Karlsruhe Institute of Technology
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/juliabutte" # the subpath of your site, e.g. /blog
+url: "https://juliabutte.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  JuliaButte
 orcid_id: 0009-0003-5066-8412
 researchgate: Julia-Butte
