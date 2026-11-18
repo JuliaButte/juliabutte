@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <div class="row">
+    <div class="column1"> {{ content }} </div>
+    <div class="column2"> <img src="../IMG_9685-_1_.webp" alt="That's me!" style="width:50%"> <br/>
+    Office: <br/>
+    Room 154, Building 50.34 <br/>
+    Am Fasanengarten 5 <br/>
+    76131 Karlsruhe, Germany</div>
+  </div>
+
+  {%- if site.publications.size > 0 -%}
+  <hr/>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Publications" }}</h2>
+    <ul class="post-list">
+      {%- for publication in site.publications -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <h3> {{ publication.title }} </h3>
+        {{ publication.authors }}
+        <ul class="pub-info-list">
+          {%- if publication.doi -%}<li><a href="{{ publication.doi | escape }}"> <span class="username"> doi </span></a></li>{%- endif -%}
+          {%- if publication.arxiv -%}<li><a href="{{ publication.arxiv | escape }}"> <span class="username"> arXiv </span></a></li>{%- endif -%}
+          {%- if publication.abstract -%}<li><input type="checkbox" id="abstract{{ publication.myID }}" class="toggle" myID ="{{ publication.myID }}" onchange="abstracttrigger()"/> <label for="abstract{{ publication.myID }}" class="toggle-lbl">abstract </label></li>{%- endif -%}
+           {%- if publication.bibtex -%}<li><input type="checkbox" id="bibtex{{ publication.myID }}" class="toggle-bibtex" myID ="{{ publication.myID }}" onchange="bibtextrigger()"/> <label  for="bibtex{{ publication.myID }}" class="toggle-lbl"> bibtex </span></a></li>{%- endif -%}
+        </ul>
+
+        <div class="abstract-expand">{{ publication.abstract }}</div>
+        <div class="bibtex-expand"><pre><code>{{ publication.bibtex }}</code></pre></div>
+        <hr/>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- else -%}
+    <h2> No publications found</h2>
+  {%- endif -%}
+  
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "News" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+            {{ post.title }}
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>
+
+
+<script language="javascript">
+  function abstracttrigger() {
+    document.getElementById('bibtex' + event.target.getAttribute('myID')).checked = false;
+  }
+
+  function bibtextrigger() {
+    document.getElementById('abstract' + event.target.getAttribute('myID')).checked = false;
+  }
+</script>

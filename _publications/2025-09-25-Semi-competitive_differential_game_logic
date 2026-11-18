@@ -1,0 +1,24 @@
+---
+layout: default
+title:  "Semi-Competitive Differential Game Logic"
+date:   2025-09-25
+doi: https://doi.org/10.1007/978-3-032-06085-3_15
+arxiv: https://doi.org/10.48550/arXiv.2505.14688
+abstract: "This paper introduces semi-competitive differential game logic dGLsc, which enables verification of safety-critical applications that involve interactions between two agents. In dGLsc, these interactions are specified as games on hybrid systems with two players that may collaborate with each other when helpful and may compete when necessary. The players in the hybrid games of dGLsc have individual goals that may overlap, leading to nonzero-sum games. This makes dGLsc especially well-suited for verifying situations where players, e.g., share safety objectives but otherwise pursue different goals, so that zero-sum assumptions lead to overly conservative results. Additionally, dGLsc solves the subtlety that even though each player may benefit from knowledge of the other player's goals, e.g., concerning shared safety objectives, unsafe situations might still occur if every player were to mutually assume the other player would act to avoid unsafety. The syntax and semantics, as well as a sound and relatively complete proof calculus are presented for dGLsc. The relationship between dGLsc and zero-sum differential game logic dGL is discussed and the purpose of dGLsc illustrated in a canonical example. "
+authors: "Julia Butte and André Platzer"
+bibtex: "@INPROCEEDINGS{DBLP:conf/tableaux/ButteP25,<br/>
+        author = {Julia Butte and Platzer, Andr\ \\'{e}},<br/>
+        title     = {Semi-Competitive Differential Game Logic},<br/> 
+        booktitle = {TABLEAUX},<br/>
+        year      = {2025},<br/>
+        pages     = {278-295},<br/>
+        doi       = {10.1007/978-3-032-06085-3_15},<br/>
+        editor    = {Pozzato, Gian Luca and Uustalu, Tarmo},<br/>
+        booktitle = {Automated Reasoning with Analytic Tableaux and Related Methods - 33rd
+                International Conference, {TABLEAUX} 2025, Reykjav\ \\'ik, Iceland,
+                September 29 -- October 3, 2025, Proceedings},<br/>
+        series    = {LNCS},<br/>
+        volume    = {15980},<br/>
+    }"
+myID: ButteP25
+---

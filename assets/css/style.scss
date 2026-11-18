@@ -1,0 +1,167 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+.row {
+  display: flex;
+}
+
+.column1 {
+  flex: 60%;
+  padding-right: 100px;
+}
+
+.column2 {
+  flex: 40%;
+  float: right;
+}
+
+.toggle {
+  display: none;
+}
+.toggle-bibtex {
+  display: none;
+}
+
+.toggle-lbl {
+  float: left;
+  min-width: 45px;
+  min-height: 20px;
+  text-align: center;
+  margin: 0px 10px 5px 0;
+  &:last-of-type { margin-right: 0 }
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid $border-color-01;
+  &:hover { border-color: $border-color-02 }
+}
+
+.abstract-expand {
+  display: none;
+}
+
+.bibtex-expand {
+  display: none;
+}
+
+ul:has(li > input.toggle:checked) + div.abstract-expand {
+  display: block;
+  border: 1px solid #ddd;
+  border-left: 3px solid deepskyblue;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+
+ul:has(li > input.toggle-bibtex:checked) ~ div.bibtex-expand {
+  display: block;
+}
+
+pre {
+    border: 1px solid #ddd;
+    border-left: 3px solid deepskyblue;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.pub-info-list {
+  list-style: none;
+  margin-left: 0;
+  margin-left: 0;
+  margin: 0 auto;
+  margin-left: 0;
+  display: table;
+  li {
+    float: left;
+    min-width: 45px;
+    min-height: 45px;
+    text-align: center;
+    margin: 5px 10px 5px 0;
+    &:last-of-type { margin-right: 0 }
+    a {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid $border-color-01;
+      &:hover { border-color: $border-color-02 }
+    }
+  }
+}
+
+hr {
+   border: 1px solid lightskyblue;
+}
+
+.site-title {
+  @include relative-font-size(3);
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+
+  @include media-query($on-palm) {
+    padding-right: 45px;
+  }
+
+  &,
+  &:visited {
+    color: $site-title-color;
+  }
+}
+
+.footline {
+  text-align: center;
+  font-size: 12px;
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-image: linear-gradient(paleturquoise 40%, turquoise);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.wrapper_main {
+  border-radius: 25px;
+  background-color: #fdfdfd;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  @extend %clearfix;
+
+  @media screen and (max-width: $on-medium) {
+    padding-right: $spacing-unit * 0.6;
+    padding-left: $spacing-unit * 0.6;
+  }
+}
+
+.site-footer {
+  background-color: #fdfdfd;
+  border-top: 1px solid $border-color-01;
+  padding: $spacing-unit 0;
+}
+
