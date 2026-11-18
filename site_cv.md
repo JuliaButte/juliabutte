@@ -15,13 +15,13 @@ Development of an optimization method for route planning of unmanned aerial vehi
 ---
 
 ## Academic Service
-- Sub reviewer at TACAS 2027
+- Reviewer at TACAS 2027
 - Programm committee member (Resource Track) at ISWC 2026
-- Sub reviewer at ijcar 2026
-- Sub reviewer at HSCC-ICCPS 2026
-- Sub reviewer at CADE-30
-- Sub reviewer at LICS 2025
-- Sub reviewer at TACAS 2025
+- Reviewer at IJCAR 2026
+- Reviewer at HSCC-ICCPS 2026
+- Reviewer at CADE-30
+- Reviewer at LICS 2025
+- Reviewer at TACAS 2025
 
 ---
 ## Education
@@ -30,12 +30,10 @@ Development of an optimization method for route planning of unmanned aerial vehi
 
     Advisor: Professor André Platzer
 
-    Grade: 1.0
 - ### B.Sc. Information Systems, Karlsruhe Institute of Technoloy, 10/2018 - 9/2021
     Thesis: "Analysis and Extension of Existing Methods for Generating Short-Term Scheduling Proposals in Technician Service Planning
 
     Advisor: M.Sc. Fabian Meyer
 
-    Grade: 1.4
 
-- ### Abitur (Grade: 1.2), Andreae-Gymnasium Herrenberg, 6/2018
+- ### Abitur, Andreae-Gymnasium Herrenberg, 6/2018
